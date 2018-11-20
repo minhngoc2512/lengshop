@@ -23,6 +23,7 @@ session_start();
     <link href="resource/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="resource/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/resource/css/font-awesome.min.css" >
     <script type="text/javascript">
         $(document).ready(function() {
             $(".dropdown img.flag").addClass("flagvisibility");
@@ -73,14 +74,6 @@ session_start();
 </head>
 <body>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9&appId=1912645189005816";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
 
 
 <?php
@@ -90,13 +83,9 @@ include 'view/header-top.php';
 <?php
 include 'view/main-menu.php';
 include 'route.php';
-//include 'single.php';
-//include 'content-main.php';
 include 'view/footer.php';
-
 ?>
 </div>
-<!--<script src="resource/js/jquery.min.js" ></script>-->
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -147,9 +136,6 @@ include 'view/footer.php';
 
 ?>
 
-
-<!--<script src="https://uhchat.net/code.php?f=e3d2d8"></script>-->
-<script src="https://uhchat.net/code.php?f=5b8332"></script>
 
 </body>
 </html>

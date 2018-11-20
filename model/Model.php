@@ -4,9 +4,9 @@ class Model
 {
     private $host = 'localhost';
     private $port = 3306;
-    private $database = 'project_1';
+    private $database = 'lengshop';
     private $user = 'root';
-    private $password = '';
+    private $password = 'admin';
     private $conn = null;
 
     public function __construct()
@@ -23,7 +23,7 @@ class Model
         $limit = isset($option['limit']) ? ' LIMIT ' . $option['limit'] : '';
         $like = isset($option['like']) ? "LIKE '%" . $option['like'] . "%'" : '';
         $sql = "SELECT $select FROM $table $where $like $order_by $limit ";
-      //  echo $sql;
+        //  echo $sql;
         $value = $this->conn->query($sql);
         $data = array();
         while ($row = $value->fetch_assoc()) {

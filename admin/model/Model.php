@@ -1,17 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Minhngoc
- * Date: 11/04/2017
- * Time: 09:23
- */
-
 
 class Model{
     private $host='localhost';
     private $user = 'root';
-    private $password = '';
-    private  $database  ='project_1';
+    private $password = 'admin';
+    private  $database  ='lengshop';
     private $conn=null;
     function __construct()
     {

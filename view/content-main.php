@@ -69,7 +69,7 @@ if(isset($_GET['pagination'])){
     <div class="wrap">
         <div class="content-top">
             <div class="lsidebar span_1_of_c1">
-                <p><h4>You can be following us</h4></p>
+                <p><h4>Bạn có thể theo dõi chúng tôi</h4></p>
             </div>
             <div class="cont span_2_of_c1">
                 <div class="social">
@@ -137,7 +137,7 @@ if(isset($_GET['pagination'])){
                                                            src="./resource/images/ImageProducts/<?= $data['image']; ?>"
                                                            alt=""></div>
                                     <div class="mask1">
-                                        <div class="info">Quick View</div>
+                                        <div class="info">Chi tiết</div>
                                     </div>
                                 </div>
                                 <div class="price"><?php echo number_format($data['price']).'VND'; ?></div>
@@ -145,9 +145,9 @@ if(isset($_GET['pagination'])){
                         </div>
 
                     </a>
-                    <ul class="list2">
-                        <li>
-                                <img src="./resource/images/plus.png" alt="">
+                    <ul class="list2"  style="margin-bottom: 0">
+                        <li style="display: flex;justify-content: flex-end;align-items: center">
+                                <span class="fa  fa-shopping-cart" style="color: white" ></span>
 
                             <ul class="icon1 sub-icon1 profile_img">
 
@@ -155,7 +155,7 @@ if(isset($_GET['pagination'])){
                                     <form action="#" method="post">
                                     <input  type="hidden" name="id" value="<?= $data['id'] ?>" />
 
-                                        <input type="submit" name="submitbuy"  <?php if($data['sl']==0){echo 'disabled="true" value=" Product not available" ';}else{ echo 'value=" Add To Bag"';} ?>  class="active-icon c1" style="border: hidden;background: none;color: white ;text-align: center;"   >
+                                        <input type="submit" name="submitbuy"  <?php if($data['sl']==0){echo 'disabled="true" value="Hết hàng" ';}else{ echo 'value=" Thêm vào giỏ hàng"';} ?>  class="active-icon c1" style="border: hidden;background: none;color: white ;text-align: center;"   >
                                     </form>
                                 </li>
                             </ul>

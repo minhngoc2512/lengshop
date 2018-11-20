@@ -1,12 +1,6 @@
 <?php
 require_once ('model/Model.php');
 
-/**
- * Created by PhpStorm.
- * User: Minhngoc
- * Date: 11/04/2017
- * Time: 23:09
- */
 
 class User extends Model{
 

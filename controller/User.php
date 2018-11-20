@@ -12,9 +12,11 @@ class User extends Model
         return false;
 
     }
-    function AddUser($name,$pass,$email,$level=2){
 
-        $data = $this->AddData('user',['name'=>$name,'password'=>md5($pass),'email'=>$email,'level'=>$level]);
+    function AddUser($name, $pass, $email, $level = 2)
+    {
+
+        $data = $this->AddData('user', ['name' => $name, 'password' => md5($pass), 'email' => $email, 'level' => $level]);
         return $data;
 
     }
@@ -24,7 +26,9 @@ class User extends Model
         $data = $this->GetRecord('user', ['where' => "id='$id'"]);
         return $data;
     }
-    function GetAUserByName($name){
+
+    function GetAUserByName($name)
+    {
         $data = $this->GetRecord('user', ['where' => "username='$name'"]);
         return $data;
 

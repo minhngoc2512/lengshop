@@ -29,15 +29,12 @@ foreach ($value as $data) {
     $bag = $_SESSION['bag'];
     foreach ($bag as $id) {
 
-        $dataBag =$product->GetAPro($id);
+        $dataBag = $product->GetAPro($id);
 
 
         foreach ($dataBag as $valueBag) {
             $sl = (int)$valueBag['sl'];
             $sl = $sl - 1;
-
-
-
 
 
             $tablePro .= '
@@ -57,8 +54,8 @@ foreach ($value as $data) {
     include('./PHPMailer/class.smtp.php');
     include("./PHPMailer/class.phpmailer.php");
     $nFrom = "Leng Shop";    //mail duoc gui tu dau, thuong de ten cong ty ban
-    $mFrom = 'donkihote2595@gmail.com';  //dia chi email cua ban
-    $mPass = 'maitrang0606';       //mat khau email cua ban
+    $mFrom = 'mail@email.com';  //dia chi email cua ban
+    $mPass = 'admin';       //mat khau email cua ban
     $nTo = "$name"; //Ten nguoi nhan
     $mTo = $data['email'];   //dia chi nhan mail
     $mail = new PHPMailer();

@@ -9,13 +9,14 @@
         $value = $category->GetCateParent();
 
         $i = 1;
-       foreach($value as $data) {
+        foreach ($value as $data) {
 
             $i++;
             ?>
             <li><a class="color<?php echo $i; ?>"
                    href=""><?php echo $data['name']; ?></a>
-<!--                   href="./index.php?page=product&cate=--><?php //echo $data['id']; ?><!--">--><?php //echo $data['name']; ?><!--</a>-->
+                <!--                   href="./index.php?page=product&cate=--><?php //echo $data['id']; ?><!--">-->
+                <?php //echo $data['name']; ?><!--</a>-->
                 <div class="megapanel">
                     <div class="row">
                         <div class="col1">
@@ -95,12 +96,12 @@
                             if (empty($a)) {
                                 echo 0;
                             } else {
-                                echo count($a) + 1;
+                                echo count($a);
                             }
                             ?></span>
                         </div>
 
-                        <img width=20 src="./resource/images/Buyicon.png">
+                     <span class="fa fa-shopping-cart" style="color: white;width: 20px;font-size: 15px"></span>
 
                     </div>
                 </a>

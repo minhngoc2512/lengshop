@@ -13,7 +13,7 @@ foreach ($value as $data) {
     <div class="single">
         <div class="wrap">
             <div style="/* border-radius:10px; */vertical-align: middle;display: grid;text-align: center;background: #08080b;padding-bottom: 5px;margin-top: -20px;height: 50px;">
-                <span style="font-size: 20px ; margin-top:15px;color: #f7fafc">PRODUCT DETAIL</span></div>
+                <span style="font-size: 20px ; margin-top:15px;color: #f7fafc">CHI TIẾT SẢN PHẨM</span></div>
             <div class="cont span_2_of_3">
                 <div class="labout span_1_of_a1">
                     <!-- start product_slider -->
@@ -119,7 +119,7 @@ foreach ($value as $data) {
                             text-transform: uppercase;
                             -webkit-transition: all 0.3s ease-in-out;
                             -moz-transition: all 0.3s ease-in-out;
-                            -o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;">PRODUCT AVAILABLE
+                            -o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;">Sẵn có sản phẩm
 
                     </div><br>
                     <br>
@@ -139,7 +139,7 @@ foreach ($value as $data) {
                             text-transform: uppercase;
                             -webkit-transition: all 0.3s ease-in-out;
                             -moz-transition: all 0.3s ease-in-out;
-                            -o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;">PRODUCT NOT AVAILABLE
+                            -o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;">Sản phẩm không có sẵn 
 
                     </div><br><BR>
                         ';
@@ -152,7 +152,7 @@ foreach ($value as $data) {
                             <input type="hidden" name="id" value="<?= $data['id'] ?>">
                             <input type="submit" name="submitbuy" <?php if ($data['sl'] == 0) {
                                 echo 'disabled="true"';
-                            } ?> value="buy now" title="">
+                            } ?> value="MUA NGAY" title="">
                         </form>
                     </div>
 
@@ -171,63 +171,42 @@ foreach ($value as $data) {
                     text-transform: uppercase;
                     -webkit-transition: all 0.3s ease-in-out;
                     -moz-transition: all 0.3s ease-in-out;
-                    -o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;">DETAIL
+                    -o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;">CHI TIẾT
 
                     </button>
                 </div>
                 <div class="clear"></div>
-                <div class="detail-table">
+                <div class="detail-table" style="margin-top: 20px">
                     <table class="table-fill">
                         <thead>
                         <tr>
-                            <th class="text-left">Ẩn</th>
-                            <th class="text-left"></th>
+                            <th class="text-center">Ẩn</th>
+                            <th class="text-center"></th>
                         </tr>
                         </thead>
                         <tbody class="table-hover">
                         <tr>
-                            <td class="text-left">Màn hình</td>
-                            <td class="text-left"><?= $data['display'] ?></td>
+                            <td class="text-center">Màn hình</td>
+                            <td class="text-center"><?= $data['display'] ?></td>
                         </tr>
                         <tr>
-                            <td class="text-left">Ram</td>
-                            <td class="text-left"><?= $data['ram'] ?></td>
+                            <td class="text-center">Ram</td>
+                            <td class="text-center"><?= $data['ram'] ?></td>
                         </tr>
                         <tr>
-                            <td class="text-left">CPU</td>
-                            <td class="text-left"><?= $data['cpu']; ?></td>
+                            <td class="text-center">CPU</td>
+                            <td class="text-center"><?= $data['cpu']; ?></td>
                         </tr>
                         <tr>
-                            <td class="text-left">GPU</td>
-                            <td class="text-left"><?= $data['gpu']; ?></td>
+                            <td class="text-center">GPU</td>
+                            <td class="text-center"><?= $data['gpu']; ?></td>
                         </tr>
                         <tr>
-                            <td class="text-left">Power</td>
-                            <td class="text-left"><?= $data['power']; ?></td>
+                            <td class="text-center">Power</td>
+                            <td class="text-center"><?= $data['power']; ?></td>
                         </tr>
                         </tbody>
                     </table>
-                </div>
-                <div class="nbs-flexisel-container">
-                    <div class="nbs-flexisel-inner">
-                        <ul id="flexiselDemo3" class="nbs-flexisel-ul" style="left: -297.818px; display: block;">
-                            <?php
-                            $value = $product->GetAllPro();
-                           foreach ($value as $data3) {
-                                ?>
-                                <li class="nbs-flexisel-item" style="width: 175.6px;"><img
-                                            src="resource/images/ImageProducts/<?= $data3['image'] ?>">
-                                    <div class="grid-flex"><a href="../index.php?page=single&id=<?= $data3['id']; ?>"><p
-                                                    class="alert alert-success">View Detail</p></a>
-                                    </div>
-                                </li>
-                                <?php
-                            }
-                            ?>
-                        </ul>
-                        <div class="nbs-flexisel-nav-left" style="top: 74.5px;"></div>
-                        <div class="nbs-flexisel-nav-right" style="top: 74.5px;"></div>
-                    </div>
                 </div>
                 <script type="text/javascript">
                     $(window).load(function () {
@@ -249,32 +228,10 @@ foreach ($value as $data) {
                                 }
                             }
                         });
-                        $("#flexiselDemo3").flexisel({
-                            visibleItems: 5,
-                            animationSpeed: 1000,
-                            autoPlay: true,
-                            autoPlaySpeed: 3000,
-                            pauseOnHover: true,
-                            enableResponsiveBreakpoints: true,
-                            responsiveBreakpoints: {
-                                portrait: {
-                                    changePoint: 480,
-                                    visibleItems: 1
-                                },
-                                landscape: {
-                                    changePoint: 640,
-                                    visibleItems: 2
-                                },
-                                tablet: {
-                                    changePoint: 768,
-                                    visibleItems: 3
-                                }
-                            }
-                        });
                     });
                 </script>
                 <div class="toogle">
-                    <h3 class="m_3">Product Details</h3>
+                    <h3 class="m_3">CHI TIẾT</h3>
                     <p class="m_text"><?= $data['intro'] ?></p>
                 </div>
             </div>
@@ -295,7 +252,7 @@ foreach ($value as $data) {
         $("#detail").click(function () {
             $(".detail-table").show(1000);
         });
-        $(".text-left").click(function () {
+        $(".text-center").click(function () {
             $(".detail-table").hide(1000);
         });
     });
